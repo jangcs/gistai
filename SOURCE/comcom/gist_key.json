@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "lg-robot-dev",
+  "private_key_id": "8f9ab341925f3df60b41cad7ac41e1406e9294bb",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC1sJOwJrPL2DYG\npPDOUTX4ajKUMpDUvwJLyHQKjRfy801l9UV7WwLT2+mLxMtCEFFdUakSD1JzPnal\nhA0fZJx37/5/cVocBJCiA0c0Rpt9e1CRVjhiLnJM9CIQD8dv6O1Bk90pokDDJVht\nv9JekXahjHqZKE6r4B7fx2iSeoLwMSDdywvPLeJjPAeblzvPxMHIC/Di/2ZosPUW\nhYbNAXrGSq4LnxBoLButr2mXE1frC6syb+9CHDMofz+h4AaQbrfTq26q/Wjwi3dF\nIINGWzPE+z3EIA7cKOg9eh8e6whhax5EJBRM5IKbrV+VfigP9V/9oXWR0QEwo4wl\nHCrbMG5bAgMBAAECggEAM6PbZi6p3Z83Q84vj0RvxYpRk+OHXKBpg6aWrMULcIcM\nkZUTyYrFk/emOo6VgtJmfdKO7k4ijhTL3iFZJXoQKtqwiAJsrRfzD8lEvKvw18pr\nzNMntWgkHpEo+U2yzrDydjgTnRi7tXtw1ci2fyBzClmGIu/c5GcP/2SK6U8e1it0\nkUREkhkCvrFyoMeWVQEaOu90pqo+cl4NimiY/N5BiAxVnI4nKSxOQTyPGDm4xKzO\nGt2g7x2r4jffueZ3Mp6Ja6o0gcTp31ZN1ELelvyu1/QdJD73/20bfTh9fR4lO/ZK\n5cOFaoD5J0o3aRrpYNIBUwYiFiJE/FZIyQai5hFZ4QKBgQD542MKMTbwbqFhpOHW\n2HT8weFtILamn67f4fBypTny16/QrGzIBVkHdbGtEktXWGvFYNrYH7oWADwzIcA+\n+dBq9ymeZ3ZdCH94bpWaqhGhdbc08sTtTcake2INEIF5Nwb6lAFhVciTnH1J0LRL\nXbXmh8L1hWvz86U/s0otWNJeqwKBgQC6Ii6kqjA3Z8kf1n2puvjBoQEqjFstejIz\nNv/RqHFQBPQlqgTrXZh4iestmmN3/Ad/yqHAOVcefe2szsMCfeXAiZyK0XpvVk73\nF7ts2jK0ZgMGw9u9Q7bJzsQL/LAyKXMKDj7GScxgkcVUaDjAbfqQBt7UGZVmULKj\nlntryoRvEQKBgBSkqjvfUPCP0xkj69w5yYBP6/V97FjbfDDWk2yFJcJf+xA8Dkh/\n2Jj7KhBoIH04ur51f9620EKdBlwa/6y0KnmLrY5+cZLB7vXd/NHoFsjF1rqzC32n\nHS/dWX5GzMtctmDg9TQ7R/SZyufcK+jF9w7yTDLIMODYUeBvSUNxwP89AoGAPaI1\n+baVErOeKJm4sKxF1LAAl9s0EeIFn2nV2dHB+7I4OgSLbnhmlXtt0YLu7vsYbJtn\nZiRWkbU3L2Kjtj6EBnZKzLjCpv1YVn+YQ1oZMh0ZYXMXXxt9+mMqDaIVofaRrkG7\nTaOANnXudp2wNR/1uR1dSbRTATc1f+/DXJUJt1ECgYEArE9mKnkPUtMEELV4HHb6\nB2SCUPZ0EFizYoW0guOOTaNnaMeoYVlnEUq/w9UfaJFnX77kGhMgAVNRHPK6pUlo\nuDmz+CvNbRFZTI1xeXtvqsaJ/dR/gsYTdtb8ygI7IIPt2hMRSv3aFjlFhIOclCRQ\n2BUryDhMgAok1BUXAEkyUEo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "lg-robot-storage@lg-robot-dev.iam.gserviceaccount.com",
+  "client_id": "106316782684165349631",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/lg-robot-storage%40lg-robot-dev.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
