@@ -1,0 +1,45 @@
+FROM hogili89/cloud:base-cls
+
+WORKDIR /home/classification
+
+COPY cloudrobotai-owner-e5ca3becb1d7.json /home/classification
+ENV GOOGLE_APPLICATION_CREDENTIALS /home/classification/cloudrobotai-owner-e5ca3becb1d7.json
+
+#RUN apt-get -y update
+#RUN apt-get -y upgrade
+RUN apt-get install -y git
+RUN pip3 install pyyaml 
+
+RUN pip3 install GitPython==3.1.27
+RUN pip3 install firebase-admin==5.2.0
+RUN pip3 install fsspec==2022.2.0
+
+RUN pip3 install dvc==2.15.0 --ignore-installed
+RUN pip3 install dvc[gs]==2.15.0 --ignore-installed
+
+RUN pip3 install crms --ignore-installed
+#RUN pip3 install crms 
+
+RUN pip3 install python-dotenv
+
+ADD https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-395.0.0-linux-x86_64.tar.gz .
+RUN tar -xf ./google-cloud-cli-395.0.0-linux-x86_64.tar.gz
+RUN ./google-cloud-sdk/install.sh
+
+COPY ./ /home/classification
+
+RUN pip3 uninstall -y psutil
+RUN pip3 install psutil==5.8.0
+RUN pip3 install protobuf==3.20.1
+
+RUN git config --global user.email "jangcs@gmain.com"
+RUN git config --global user.name "Choulsoo Jang"
+
+#RUN ssh-keygen -q -t rsa -N '' -f /root/.ssh/id_rsa
+#RUN ssh-keyscan github.com > ~/.ssh/known_hosts
+COPY ssh.crms/ /root/.ssh
+RUN chmod 600 /root/.ssh/id_rsa
+
+ENTRYPOINT [ "python" ]
+CMD [ "finetuner_crms.py" ]
+#ENTRYPOINT [ "/bin/bash" ]
