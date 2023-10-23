@@ -34,13 +34,20 @@ OOD_OUTPUT = None
 COUNT_MAX = 3
 
 run_finetune = True
+crms_demo_phase = "phase_init"   # -> phase_req_augment -> phase_augmented
 
+def req_augment_callback(msg) :
+	global crms_demo_phase
+	print('req_augment_callback heard: [%s]' % msg.data)
+
+	crms_demo_phase = "phase_req_augment"
 
 def image_callback(image_msg, depth_msg):
 	assert image_msg.header.stamp == depth_msg.header.stamp
 
 	global COUNT, COUNT_OUTPUT, COUNT_MAX
 	global run_finetune
+	global crms_demo_phase
 
 	print('Timestamp of images(image, depth) [%s]' % str(image_msg.header.stamp))
 
@@ -140,6 +147,28 @@ def image_callback(image_msg, depth_msg):
 	times[len(times)] = time.time()
 	print("{:.4f} {}".format(times[len(times)-1]-times[len(times)-2], topic))
 
+	if len(output_dict['prediction']) == 0 :
+		return
+
+	# publish foodlist
+	food_dict = {
+		'bulgogi': '불고기',
+		'kimchi' : '김치',
+		'gimbap' : '김밥',
+		'orange' : '오렌지음료'
+	}
+
+	food_list = []
+	for food_name in list(set(output_dict['prediction'])) :
+		if food_name in food_dict :
+			food_list.append(food_dict[food_name])  # Korean Food Name
+		else :
+			food_list.append(food_name) # Original English Food Name
+
+	msg = String()
+	msg.data = json.dumps( {'crms_demo_phase': crms_demo_phase, 'food': food_list} )
+	mention_pub.publish(msg)
+
 	# Finetuning
 	prediction = np.array(output_dict['prediction'])
 	if 'OOD' in prediction:
@@ -147,7 +176,7 @@ def image_callback(image_msg, depth_msg):
 	else :
 		COUNT = 0
 
-	if COUNT > COUNT_MAX and run_finetune:
+	if COUNT > COUNT_MAX and run_finetune and crms_demo_phase == 'phase_req_augment':
 		# print status and visualization
 		(x1, y1), (x2, y2) = (img_w-220, 0), (img_w, 35)
 		image_vis[y1:y2, x1:x2, :] = 0
@@ -175,7 +204,7 @@ def image_callback(image_msg, depth_msg):
 		COUNT = 0
 		run_finetune = False
 
-
+		crms_demo_phase = 'phase_augmented'
 
 	# cv2.imshow("FoodListBuilder",depth_data)
 	# cv2.waitKey(1)
@@ -186,17 +215,15 @@ def main(args=None):
 	if args is None:
 		args = sys.argv
 
+	global node, mention_pub
+
 	rclpy.init(args=args)
 	node = rclpy.create_node('FoodListBuilder_node')
+
 	# # mention_pub = node.create_publisher(String, 'food_mention', qos_profile=qos_profile_system_default)
-	# mention_pub = node.create_publisher(String, '/food_mention', 10)
+	mention_pub = node.create_publisher(String, '/food_mention', 10)
 
-	# msg = String()
-
-	# dict_data = {'food': ['불고기', '김밥', '김치', '오렌지음료']}
-	# msg.data = json.dumps(dict_data)
-
-	# mention_pub.publish(msg)
+	sub = node.create_subscription(String, '/req_augment', req_augment_callback, 10)
 
 	s1 = Subscriber(node, Image, "/image")
 	s2 = Subscriber(node, Image, "/depth")
