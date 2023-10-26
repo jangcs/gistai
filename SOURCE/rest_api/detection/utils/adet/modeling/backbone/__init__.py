@@ -1,1 +1,0 @@
-from .rgbdfpn import build_resnet_rgbd_latefusion_fpn_backbone, build_resnet_rgbd_earlyfusion_fpn_backbone
