@@ -1,0 +1,145 @@
+jackal@J100-0778:~/jackal_ws/install/jackal_control/share/jackal_control/launch$ ros2 launch jackal_robot bringup.launch.py
+[INFO] [launch]: All log files can be found below /home/jackal/.ros/log/2023-11-01-17-07-11-264940-J100-0778-8527
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [robot_state_publisher-1]: process started with pid [8531]
+[INFO] [ekf_node-2]: process started with pid [8533]
+[INFO] [imu_filter_madgwick_node-3]: process started with pid [8535]
+[INFO] [ros2_control_node-4]: process started with pid [8537]
+[INFO] [spawner.py-5]: process started with pid [8539]
+[INFO] [spawner.py-6]: process started with pid [8541]
+[INFO] [marker_server-7]: process started with pid [8543]
+[INFO] [twist_mux-8]: process started with pid [8545]
+[INFO] [joy_node-9]: process started with pid [8579]
+[INFO] [teleop_node-10]: process started with pid [8585]
+[INFO] [aggregator_node-11]: process started with pid [8588]
+[INFO] [diagnostics_updater-12]: process started with pid [8607]
+[INFO] [wireless_watcher-13]: process started with pid [8624]
+[INFO] [micro_ros_agent-14]: process started with pid [8635]
+[INFO] [export ROS_DOMAIN_ID=0;-15]: process started with pid [8654]
+[micro_ros_agent-14] [1698826031.609668] info     | TermiosAgentLinux.cpp | init                     | running...             | fd: 3
+[micro_ros_agent-14] [1698826031.609889] info     | Root.cpp           | set_verbose_level        | logger setup           | verbose_level: 4
+[robot_state_publisher-1] Parsing robot urdf xml string.
+[robot_state_publisher-1] Link chassis_link had 9 children
+[robot_state_publisher-1] Link front_fender_link had 0 children
+[robot_state_publisher-1] Link front_left_wheel_link had 0 children
+[robot_state_publisher-1] Link front_right_wheel_link had 0 children
+[robot_state_publisher-1] Link imu_link had 0 children
+[robot_state_publisher-1] Link mid_mount had 2 children
+[robot_state_publisher-1] Link front_mount had 0 children
+[robot_state_publisher-1] Link rear_mount had 0 children
+[robot_state_publisher-1] Link navsat_link had 0 children
+[robot_state_publisher-1] Link rear_fender_link had 0 children
+[robot_state_publisher-1] Link rear_left_wheel_link had 0 children
+[robot_state_publisher-1] Link rear_right_wheel_link had 0 children
+[robot_state_publisher-1] [INFO] [1698826031.536170938] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-1] [INFO] [1698826031.536276710] [robot_state_publisher]: got segment chassis_link
+[robot_state_publisher-1] [INFO] [1698826031.536285952] [robot_state_publisher]: got segment front_fender_link
+[robot_state_publisher-1] [INFO] [1698826031.536291681] [robot_state_publisher]: got segment front_left_wheel_link
+[robot_state_publisher-1] [INFO] [1698826031.536297545] [robot_state_publisher]: got segment front_mount
+[robot_state_publisher-1] [INFO] [1698826031.536303350] [robot_state_publisher]: got segment front_right_wheel_link
+[robot_state_publisher-1] [INFO] [1698826031.536308806] [robot_state_publisher]: got segment imu_link
+[robot_state_publisher-1] [INFO] [1698826031.536313825] [robot_state_publisher]: got segment mid_mount
+[robot_state_publisher-1] [INFO] [1698826031.536319050] [robot_state_publisher]: got segment navsat_link
+[robot_state_publisher-1] [INFO] [1698826031.536324133] [robot_state_publisher]: got segment rear_fender_link
+[robot_state_publisher-1] [INFO] [1698826031.536329322] [robot_state_publisher]: got segment rear_left_wheel_link
+[robot_state_publisher-1] [INFO] [1698826031.536334878] [robot_state_publisher]: got segment rear_mount
+[robot_state_publisher-1] [INFO] [1698826031.536340389] [robot_state_publisher]: got segment rear_right_wheel_link
+[imu_filter_madgwick_node-3] [INFO] [1698826031.561695816] [imu_filter_node]: Starting ImuFilter
+[imu_filter_madgwick_node-3] [INFO] [1698826031.562427048] [imu_filter_node]: Using dt computed from message headers
+[imu_filter_madgwick_node-3] [INFO] [1698826031.562452838] [imu_filter_node]: The gravity vector is kept in the IMU message.
+[imu_filter_madgwick_node-3] [INFO] [1698826031.562495265] [imu_filter_node]: Imu filter gain set to 0.100000
+[imu_filter_madgwick_node-3] [INFO] [1698826031.562509703] [imu_filter_node]: Gyro drift bias set to 0.000000
+[imu_filter_madgwick_node-3] [INFO] [1698826031.562517337] [imu_filter_node]: Magnetometer bias values: 0.000000 0.000000 0.000000
+[ros2_control_node-4] [INFO] [1698826031.528171948] [JackalHardware]: Name: jackal_hardware
+[ros2_control_node-4] [INFO] [1698826031.528239728] [JackalHardware]: Number of Joints 4
+[ros2_control_node-4] [INFO] [1698826031.539035829] [JackalHardware]: Starting ...please wait...
+[ros2_control_node-4] [INFO] [1698826031.539100086] [JackalHardware]: System Successfully started!
+[ros2_control_node-4] [INFO] [1698826031.604747763] [controller_manager]: update rate is 50 Hz
+[marker_server-7] [INFO] [1698826031.551001743] [twist_server_node]: [interactive_marker_twist_server] Initialized.
+[twist_mux-8] [INFO] [1698826031.587935528] [twist_mux]: Topic handler 'topics.external' subscribed to topic 'cmd_vel': timeout = 0.500000s , priority = 1.
+[twist_mux-8] [INFO] [1698826031.596789128] [twist_mux]: Topic handler 'topics.interactive_marker' subscribed to topic 'twist_marker_server/cmd_vel': timeout = 0.500000s , priority = 8.
+[twist_mux-8] [INFO] [1698826031.598504126] [twist_mux]: Topic handler 'topics.joy' subscribed to topic 'joy_teleop/cmd_vel': timeout = 0.500000s , priority = 10.
+[twist_mux-8] [INFO] [1698826031.598738646] [twist_mux]: Topic handler 'locks.e_stop' subscribed to topic 'e_stop': timeout = None , priority = 255.
+[teleop_node-10] [INFO] [1698826031.673704703] [TeleopTwistJoy]: Teleop enable button 4.
+[teleop_node-10] [INFO] [1698826031.673772792] [TeleopTwistJoy]: Turbo on button 5.
+[teleop_node-10] [INFO] [1698826031.673779204] [TeleopTwistJoy]: Linear axis x on 1 at scale 0.400000.
+[teleop_node-10] [INFO] [1698826031.673787825] [TeleopTwistJoy]: Turbo for linear axis x is scale 1.000000.
+[teleop_node-10] [INFO] [1698826031.673792910] [TeleopTwistJoy]: Angular axis yaw on 0 at scale 0.600000.
+[teleop_node-10] [INFO] [1698826031.673797180] [TeleopTwistJoy]: Turbo for angular axis yaw is scale 1.200000.
+[aggregator_node-11] [INFO] [1698826031.668964266] [AnalyzerGroup]: Retrieved 30 parameter(s) for analyzer group with prefix ''.
+[aggregator_node-11] [INFO] [1698826031.678659199] [AnalyzerGroup]: Group '/Jackal', creating diagnostic_aggregator/AnalyzerGroup 'General' (breadcrumb: general) ...
+[aggregator_node-11] [INFO] [1698826031.679632719] [AnalyzerGroup]: Retrieved 28 parameter(s) for analyzer group with prefix 'general'.
+[aggregator_node-11] [INFO] [1698826031.679663406] [AnalyzerGroup]: Group '/Jackal/General', creating diagnostic_aggregator/GenericAnalyzer 'Battery' (breadcrumb: analyzers.battery) ...
+[aggregator_node-11] [INFO] [1698826031.679822772] [GenericAnalyzerBase]: Initialized analyzer 'Battery' with path '/Jackal/General/Battery' and breadcrumb 'general.analyzers.battery'.
+[aggregator_node-11] [INFO] [1698826031.679836269] [AnalyzerGroup]: Adding analyzer 'Battery' to group '/Jackal/General'.
+[aggregator_node-11] [INFO] [1698826031.679843836] [AnalyzerGroup]: Group '/Jackal/General', creating diagnostic_aggregator/GenericAnalyzer 'Current' (breadcrumb: analyzers.current) ...
+[aggregator_node-11] [INFO] [1698826031.679864190] [GenericAnalyzerBase]: Initialized analyzer 'Current' with path '/Jackal/General/Current' and breadcrumb 'general.analyzers.current'.
+[aggregator_node-11] [INFO] [1698826031.679869271] [AnalyzerGroup]: Adding analyzer 'Current' to group '/Jackal/General'.
+[aggregator_node-11] [INFO] [1698826031.679875140] [AnalyzerGroup]: Group '/Jackal/General', creating diagnostic_aggregator/GenericAnalyzer 'System' (breadcrumb: analyzers.system) ...
+[aggregator_node-11] [INFO] [1698826031.679895998] [GenericAnalyzerBase]: Initialized analyzer 'System' with path '/Jackal/General/System' and breadcrumb 'general.analyzers.system'.
+[aggregator_node-11] [INFO] [1698826031.679899751] [AnalyzerGroup]: Adding analyzer 'System' to group '/Jackal/General'.
+[aggregator_node-11] [INFO] [1698826031.679904292] [AnalyzerGroup]: Group '/Jackal/General', creating diagnostic_aggregator/GenericAnalyzer 'User Voltage' (breadcrumb: analyzers.user_voltage) ...
+[aggregator_node-11] [INFO] [1698826031.679920524] [GenericAnalyzerBase]: Initialized analyzer 'User Voltage' with path '/Jackal/General/User Voltage' and breadcrumb 'general.analyzers.user_voltage'.
+[aggregator_node-11] [INFO] [1698826031.679925075] [AnalyzerGroup]: Adding analyzer 'User Voltage' to group '/Jackal/General'.
+[aggregator_node-11] [INFO] [1698826031.679931057] [AnalyzerGroup]: Group '/Jackal/General', creating diagnostic_aggregator/AnalyzerGroup 'Sensor Topics' (breadcrumb: sensors) ...
+[aggregator_node-11] [INFO] [1698826031.680230297] [AnalyzerGroup]: Retrieved 8 parameter(s) for analyzer group with prefix 'general.sensors'.
+[aggregator_node-11] [INFO] [1698826031.680239733] [AnalyzerGroup]: Group '/Jackal/General/Sensor Topics', creating diagnostic_aggregator/GenericAnalyzer 'IMU' (breadcrumb: analyzers.imu) ...
+[aggregator_node-11] [INFO] [1698826031.680360431] [GenericAnalyzerBase]: Initialized analyzer 'IMU' with path '/Jackal/General/Sensor Topics/IMU' and breadcrumb 'general.sensors.analyzers.imu'.
+[aggregator_node-11] [INFO] [1698826031.680367108] [AnalyzerGroup]: Adding analyzer 'IMU' to group '/Jackal/General/Sensor Topics'.
+[aggregator_node-11] [INFO] [1698826031.680372980] [AnalyzerGroup]: Group '/Jackal/General/Sensor Topics', creating diagnostic_aggregator/GenericAnalyzer 'Navsat' (breadcrumb: analyzers.navsat) ...
+[aggregator_node-11] [INFO] [1698826031.680389345] [GenericAnalyzerBase]: Initialized analyzer 'Navsat' with path '/Jackal/General/Sensor Topics/Navsat' and breadcrumb 'general.sensors.analyzers.navsat'.
+[aggregator_node-11] [INFO] [1698826031.680393934] [AnalyzerGroup]: Adding analyzer 'Navsat' to group '/Jackal/General/Sensor Topics'.
+[aggregator_node-11] [INFO] [1698826031.680397652] [AnalyzerGroup]: Initialized analyzer group '/Jackal/General/Sensor Topics' with path '/Jackal/General/Sensor Topics' and breadcrumb 'general.sensors'.
+[aggregator_node-11] [INFO] [1698826031.680402756] [AnalyzerGroup]: Adding analyzer '/Jackal/General/Sensor Topics' to group '/Jackal/General'.
+[aggregator_node-11] [INFO] [1698826031.680407837] [AnalyzerGroup]: Group '/Jackal/General', creating diagnostic_aggregator/GenericAnalyzer 'Bluetooth Joystick' (breadcrumb: teleop) ...
+[aggregator_node-11] [INFO] [1698826031.680429413] [GenericAnalyzerBase]: Initialized analyzer 'Bluetooth Joystick' with path '/Jackal/General/Bluetooth Joystick' and breadcrumb 'general.teleop'.
+[aggregator_node-11] [INFO] [1698826031.680434171] [AnalyzerGroup]: Adding analyzer 'Bluetooth Joystick' to group '/Jackal/General'.
+[aggregator_node-11] [INFO] [1698826031.680440283] [AnalyzerGroup]: Group '/Jackal/General', creating diagnostic_aggregator/GenericAnalyzer 'Twist Mux' (breadcrumb: twist) ...
+[aggregator_node-11] [INFO] [1698826031.680498323] [GenericAnalyzerBase]: Initialized analyzer 'Twist Mux' with path '/Jackal/General/Twist Mux' and breadcrumb 'general.twist'.
+[aggregator_node-11] [INFO] [1698826031.680503841] [AnalyzerGroup]: Adding analyzer 'Twist Mux' to group '/Jackal/General'.
+[aggregator_node-11] [INFO] [1698826031.680508221] [AnalyzerGroup]: Initialized analyzer group '/Jackal/General' with path '/Jackal/General' and breadcrumb 'general'.
+[aggregator_node-11] [INFO] [1698826031.680516723] [AnalyzerGroup]: Adding analyzer '/Jackal/General' to group '/Jackal'.
+[aggregator_node-11] [INFO] [1698826031.680522160] [AnalyzerGroup]: Initialized analyzer group 'Jackal' with path '/Jackal' and breadcrumb ''.
+[aggregator_node-11] [INFO] [1698826031.680532085] [GenericAnalyzerBase]: Initialized analyzer 'Other' with path '/Jackal/Other' and breadcrumb ''.
+[ros2_control_node-4] [INFO] [1698826031.835318873] [controller_manager]: Loading controller 'jackal_velocity_controller'
+[spawner.py-6] [INFO] [1698826031.908000084] [spawner_jackal_velocity_controller]: Loaded jackal_velocity_controller
+[ros2_control_node-4] [INFO] [1698826031.914500452] [controller_manager]: Configuring controller 'jackal_velocity_controller'
+[spawner.py-6] [INFO] [1698826031.920036597] [spawner_jackal_velocity_controller]: Failed to configure controller
+[ros2_control_node-4] [INFO] [1698826031.938764733] [controller_manager]: Loading controller 'joint_state_broadcaster'
+[ERROR] [spawner.py-5]: process has died [pid 8539, exit code 1, cmd '/opt/ros/foxy/lib/controller_manager/spawner.py joint_state_broadcaster --ros-args'].
+[ERROR] [spawner.py-6]: process has died [pid 8541, exit code 1, cmd '/opt/ros/foxy/lib/controller_manager/spawner.py jackal_velocity_controller --ros-args'].
+[aggregator_node-11] [INFO] [1698826032.023393784] [GenericAnalyzer]: Analyzer 'System' matches 'jackal_diagnostics: System'.
+[aggregator_node-11] [INFO] [1698826032.023435079] [AnalyzerGroup]: Group '/Jackal/General' has a match with my analyzer 'System'.
+[aggregator_node-11] [INFO] [1698826032.023445743] [AnalyzerGroup]: Group 'Jackal' has a match with my analyzer '/Jackal/General'.
+[aggregator_node-11] [INFO] [1698826032.023458991] [GenericAnalyzer]: Analyzer 'Battery' matches 'jackal_diagnostics: Battery'.
+[aggregator_node-11] [INFO] [1698826032.023463540] [AnalyzerGroup]: Group '/Jackal/General' has a match with my analyzer 'Battery'.
+[aggregator_node-11] [INFO] [1698826032.023470045] [AnalyzerGroup]: Group 'Jackal' has a match with my analyzer '/Jackal/General'.
+[aggregator_node-11] [INFO] [1698826032.023482009] [GenericAnalyzer]: Analyzer 'User Voltage' matches 'jackal_diagnostics: User Voltage Supplies'.
+[aggregator_node-11] [INFO] [1698826032.023486219] [AnalyzerGroup]: Group '/Jackal/General' has a match with my analyzer 'User Voltage'.
+[aggregator_node-11] [INFO] [1698826032.023493073] [AnalyzerGroup]: Group 'Jackal' has a match with my analyzer '/Jackal/General'.
+[aggregator_node-11] [INFO] [1698826032.023505585] [GenericAnalyzer]: Analyzer 'Current' matches 'jackal_diagnostics: Current Consumption'.
+[aggregator_node-11] [INFO] [1698826032.023509681] [AnalyzerGroup]: Group '/Jackal/General' has a match with my analyzer 'Current'.
+[aggregator_node-11] [INFO] [1698826032.023516004] [AnalyzerGroup]: Group 'Jackal' has a match with my analyzer '/Jackal/General'.
+[aggregator_node-11] [INFO] [1698826032.023525063] [GenericAnalyzer]: Analyzer 'IMU' matches 'jackal_diagnostics: imu/data_raw topic status'.
+[aggregator_node-11] [INFO] [1698826032.023530178] [AnalyzerGroup]: Group '/Jackal/General/Sensor Topics' has a match with my analyzer 'IMU'.
+[aggregator_node-11] [INFO] [1698826032.023534585] [AnalyzerGroup]: Group '/Jackal/General' has a match with my analyzer '/Jackal/General/Sensor Topics'.
+[aggregator_node-11] [INFO] [1698826032.023539542] [AnalyzerGroup]: Group 'Jackal' has a match with my analyzer '/Jackal/General'.
+[aggregator_node-11] [INFO] [1698826032.023548455] [GenericAnalyzer]: Analyzer 'IMU' matches 'jackal_diagnostics: imu/mag topic status'.
+[aggregator_node-11] [INFO] [1698826032.023552483] [AnalyzerGroup]: Group '/Jackal/General/Sensor Topics' has a match with my analyzer 'IMU'.
+[aggregator_node-11] [INFO] [1698826032.023556590] [AnalyzerGroup]: Group '/Jackal/General' has a match with my analyzer '/Jackal/General/Sensor Topics'.
+[aggregator_node-11] [INFO] [1698826032.023560967] [AnalyzerGroup]: Group 'Jackal' has a match with my analyzer '/Jackal/General'.
+[aggregator_node-11] [INFO] [1698826032.023570713] [GenericAnalyzer]: Analyzer 'System' matches 'jackal_diagnostics: feedback topic status'.
+[aggregator_node-11] [INFO] [1698826032.023576760] [AnalyzerGroup]: Group '/Jackal/General' has a match with my analyzer 'System'.
+[aggregator_node-11] [INFO] [1698826032.023586678] [AnalyzerGroup]: Group 'Jackal' has a match with my analyzer '/Jackal/General'.
+[aggregator_node-11] [INFO] [1698826032.023595759] [GenericAnalyzer]: Analyzer 'Navsat' matches 'jackal_diagnostics: navsat/nmea_sentence topic status'.
+[aggregator_node-11] [INFO] [1698826032.023599963] [AnalyzerGroup]: Group '/Jackal/General/Sensor Topics' has a match with my analyzer 'Navsat'.
+[aggregator_node-11] [INFO] [1698826032.023604819] [AnalyzerGroup]: Group '/Jackal/General' has a match with my analyzer '/Jackal/General/Sensor Topics'.
+[aggregator_node-11] [INFO] [1698826032.023610295] [AnalyzerGroup]: Group 'Jackal' has a match with my analyzer '/Jackal/General'.
+[wireless_watcher-13] [INFO] [1698826032.142777181] [wireless_watcher]: Monitoring wlo1
+[wireless_watcher-13] [INFO] [1698826032.149035543] [wireless_watcher]: Retrieved status of interface wlo1. Now updating at 1 Hz.
+[aggregator_node-11] [INFO] [1698826032.190455652] [GenericAnalyzer]: Analyzer 'Twist Mux' matches 'twist_mux: Twist mux status'.
+[aggregator_node-11] [INFO] [1698826032.190508073] [AnalyzerGroup]: Group '/Jackal/General' has a match with my analyzer 'Twist Mux'.
+[aggregator_node-11] [INFO] [1698826032.190512252] [AnalyzerGroup]: Group 'Jackal' has a match with my analyzer '/Jackal/General'.
+[imu_filter_madgwick_node-3] [WARN] [1698826041.626617193] [imu_filter_node]: Still waiting for data on topic /imu/data_raw...
+[imu_filter_madgwick_node-3] [WARN] [1698826051.626572401] [imu_filter_node]: Still waiting for data on topic /imu/data_raw...
+[imu_filter_madgwick_node-3] [WARN] [1698826061.626595764] [imu_filter_node]: Still waiting for data on topic /imu/data_raw...
