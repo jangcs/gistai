@@ -1,6 +1,0 @@
-{   
-    "task": "detection",
-    "api_name": "uoais_detection",
-    "data_id_list" : ["none-object", "object"],
-    "create_date": "2021-11-01"
-}

@@ -1,6 +1,0 @@
-{   
-    "task": "classification",
-    "model_name": "food_classification",
-    "classes" : ["food_5/bulgogi", "food_5/kimchi", "food_5/gimbap"],
-    "create_date": "2023-08-29"
-}

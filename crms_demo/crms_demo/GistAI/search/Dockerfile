@@ -1,9 +1,0 @@
-FROM hogili89/cloud:base-cls
-
-RUN pip install git+https://github.com/openai/CLIP.git
-
-COPY ./ /home/search
-WORKDIR /home/search
-
-ENTRYPOINT [ "python" ]
-CMD [ "main.py" ]
