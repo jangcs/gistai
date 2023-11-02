@@ -17,16 +17,17 @@ from cv_bridge import CvBridge, CvBridgeError
 
 import json
 
-ip = '0.0.0.0'
+ip_edge = '192.168.0.11'
+ip_cloud = '192.168.0.5'
 roi_x1, roi_x2 = 80, 500
 roi_y1, roi_y2 = 130, 450
 vis_h, vis_w = 960, 1280
 
 # URL
-url_finetuner = 'http://%s:8070/' %ip  # Classification URL
-url_classification = 'http://%s:8080/' %ip  # Classification URL
-url_detection = 'http://%s:8090/' %ip  # Detection URL
-url_search = 'http://%s:9000/' %ip  # Search URL
+url_classification = 'http://%s:8080/' %ip_edge  # Classification URL
+url_detection = 'http://%s:8090/' %ip_edge  # Detection URL
+url_finetuner = 'http://%s:8070/' %ip_cloud  # Classification URL
+url_search = 'http://%s:9000/' %ip_cloud  # Search URL
     
 ## Get Image from RealSense Stream
 COUNT = 0
@@ -68,10 +69,14 @@ def image_callback(image_msg, depth_msg):
 	base64_image = base64.b64encode(png_image[1]).decode('utf-8')
 	base64_depth = base64.b64encode(png_depth[1]).decode('utf-8')    
 
-
 	data = json.dumps({'image': base64_image, 'depth': base64_depth})
-	response = requests.post(url_detection + 'upload', data=data, headers={'Content-Type': 'application/json'})
-	print(response.json())
+	try:
+		response = requests.post(url_detection + 'upload', data=data, headers={'Content-Type': 'application/json'})
+		print(response.json())
+	except Exception as e:
+		print(e)
+		return
+
 
 	image_vis = image_data
 	img_h, img_w = image_vis.shape[:2]
