@@ -1,0 +1,18 @@
+FROM osrf/ros:foxy-desktop
+
+COPY ./crms_demo /root/ros2_ws/src/crms_demo
+
+RUN apt update && apt-get install python3-pip -y
+RUN pip install Flask
+RUN pip install requests
+
+WORKDIR /root/ros2_ws
+RUN colcon build
+
+ENV ROS_DOMAIN_ID=0
+
+COPY ./ros2_entrypoint.sh /
+ENTRYPOINT ["/ros2_entrypoint.sh"]
+#CMD ["ros2 run crms_demo FoodListBuilder_node"]
+CMD ["ros2", "run", "crms_demo", "FoodListBuilder_node"]
+
