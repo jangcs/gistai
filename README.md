@@ -1,4 +1,14 @@
 # Robot
+
+## Camera_node (for IPC)
+```
+sudo su
+source /opt/ros/foxy/setup.bash
+source /home/jackal/colcon_ws/install/local_setup.bash
+export ROS_DOMAIN_ID=0
+ros2 run crms_demo Camera_node
+```
+
 ## FoodListBuilder_node
 ```
 cd ~/colcon_ws/src
@@ -6,6 +16,14 @@ docker build --tag foodlistbuilder:crms -f ./Dockerfile_FoodListBuilder .
 docker image tag foodlistbuilder:crms asia-northeast3-docker.pkg.dev/cloudrobotai/crms-demo/foodlistbuilder:crms
 docker push asia-northeast3-docker.pkg.dev/cloudrobotai/crms-demo/foodlistbuilder:crms
 docker run -it --net host --ipc host --name foodListBuilder asia-northeast3-docker.pkg.dev/cloudrobotai/crms-demo/foodlistbuilder:crms
+docker run -it --net host --ipc host --name foodListBuilder \
+            -e DISPLAY=unix$DISPLAY \
+            --volume /tmp/.X11-unix:/tmp/.X11-unix:ro \
+            asia-northeast3-docker.pkg.dev/cloudrobotai/crms-demo/foodlistbuilder:crms 
+```
+### in the host
+```
+xhost +local:docker
 ```
 
 ## FoodMention_node
