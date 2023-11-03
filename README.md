@@ -36,7 +36,7 @@ docker run -it --net host --ipc host --name foodMention asia-northeast3-docker.p
 ```
 
 # Edge
-## Classification
+## Classification_AI
 ```
 cd ~/crms_demo/classification
 docker build --tag hogili89/cloud:classification_CRMS -f ./Dockerfile_classification_crms .
@@ -46,7 +46,7 @@ docker run -it -v /home/jangcs/crms_demo/food_classification:/home/model_store/f
             --net host --gpus all \
             asia-northeast3-docker.pkg.dev/cloudrobotai/crms-demo/classification:crms
 ```
-## detection
+## Detection_AI
 ```
 cd ~/crms_demo/classification
 docker build --tag hogili89/cloud:detection_CRMS -f ./Dockerfile_crms .
