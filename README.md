@@ -2,11 +2,20 @@
 
 ## Camera_node (for IPC)
 ```
+
+<!--
 sudo su
 source /opt/ros/foxy/setup.bash
 source /home/jackal/colcon_ws/install/local_setup.bash
 export ROS_DOMAIN_ID=0
 ros2 run crms_demo Camera_node
+-->
+cd ~/colcon_ws/src
+docker build --tag camera:crms -f ./Dockerfile_Camera .
+docker image tag camera:crms asia-northeast3-docker.pkg.dev/cloudrobotai/crms-demo/camera:crms
+docker run --privileged -it --net host --ipc host --name camera \
+            -e DISPLAY=unix$DISPLAY --volume /tmp/.X11-unix:/tmp/.X11-unix:ro \
+            asia-northeast3-docker.pkg.dev/cloudrobotai/crms-demo/camera:crms 
 ```
 
 ## FoodListBuilder_node
