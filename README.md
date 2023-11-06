@@ -1,5 +1,10 @@
 # Robot
 
+## Xhost in the host
+```
+xhost +local:docker
+```
+
 ## Camera_node (for IPC)
 <!--
 sudo su
@@ -29,10 +34,7 @@ docker run -it --net host --ipc host --name foodListBuilder \
             --volume /tmp/.X11-unix:/tmp/.X11-unix:ro \
             asia-northeast3-docker.pkg.dev/cloudrobotai/crms-demo/foodlistbuilder:crms 
 ```
-### in the host
-```
-xhost +local:docker
-```
+
 
 ## FoodMention_node
 ```
