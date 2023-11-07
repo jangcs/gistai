@@ -43,7 +43,9 @@ cd ~/colcon_ws/src
 docker build --tag foodmention:crms -f ./Dockerfile_FoodMention .
 docker image tag foodmention:crms asia-northeast3-docker.pkg.dev/cloudrobotai/crms-demo/foodmention:crms
 docker push asia-northeast3-docker.pkg.dev/cloudrobotai/crms-demo/foodmention:crms
-docker run -it --net host --ipc host --name foodMention asia-northeast3-docker.pkg.dev/cloudrobotai/crms-demo/foodmention:crms
+docker run -it --net host --ipc host --name foodMention \
+            -e OPENAI_API_KEY=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 \
+            asia-northeast3-docker.pkg.dev/cloudrobotai/crms-demo/foodmention:crms
 ```
 
 # Edge
