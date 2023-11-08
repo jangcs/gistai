@@ -31,13 +31,16 @@ def foodMention_callback(msg):
 	json_data = json.loads(msg.data)
 
 	phase = json_data['crms_demo_phase']
+	text = String()
 	
 	if phase == 'phase_init' :
 		food_list = list(set(json_data['food']))
 		if 'OOD' in food_list :
 			if not request_augment :
 				response_content = "모르는 음식이 있군요. 한번 알아보겠습니다."
-				print("Response: " + response_content )
+				print("Response: " + response_content)
+				text.data = response_content
+				text_pub.publish(text)
 
 				msg = String()
 				msg.data = json.dumps( {'request': 'req_augment'} )
@@ -47,6 +50,9 @@ def foodMention_callback(msg):
 			else :  # request_augment == True
 				response_content = "음식 지능을 요청하였습니다."
 				print("Response: " + response_content )
+				text.data = response_content
+				text_pub.publish(text)
+
 
 		else :
 			openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -65,6 +71,8 @@ def foodMention_callback(msg):
 
 			response_content = response['choices'][0]['message']['content']
 			print("Response: " + response_content )
+			text = reponse_content
+			text_pub.publish(text)
 
 			arrived = False
 
@@ -89,6 +97,8 @@ def foodMention_callback(msg):
 
 		response_content = response['choices'][0]['message']['content']
 		print("Response: " + response_content )
+		text = reponse_content
+		text_pub.publish(text)
 
 		arrived = False
 
@@ -107,6 +117,7 @@ def main(args=None):
 	node = rclpy.create_node('FoodMention_node')
 
 	req_augment_pub = node.create_publisher(String, '/req_augment', 10)
+	text_pub = node.create_publisher(String, '/text', 10)
 
 	# sub = node.create_subscription(String, 'food_mention', foodMention_callback, qos_profile=qos_profile_system_default)
 	sub_food_mention = node.create_subscription(String, '/food_mention', foodMention_callback, 10)
