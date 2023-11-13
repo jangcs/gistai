@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "cloudrobotai",
+  "private_key_id": "e5ca3becb1d766f432dd0bd999142f9fe2554f2b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDNTEIQf9LfWisJ\naR3E3c90G5aDUj1aVfJI4cX+oclxteGfl2bEePhhE9sPu4f3In/CU6Bz/pUlTRWk\ncs49FeBdeQK0sM42Cc72VOlLRIEW0VgKRKSjHAHdxWDMMqTQPmDMr7IF5p8R7w38\nF/ynzWGmhnUHu6l4Y4eiBG2ST9OXU1uzW7uk4VHs7uzXJQ8A6mjkYeQU/N45ZBQo\nwHHsKzWA9lFtPyHWXOYE4+adfb7t4wVvPTmdvHPYgNVU9LXXD59RC8AKdW2YEXuK\n7mxxtXSl0y9PSqxrSEEU3a4xP5gQ1hrXccjLofldMp5MmPQeYItZNFg4tjPfrW8r\nMULYokg1AgMBAAECggEAGYr1ZUwiFnwHgsI7W/UlDJMqJOikjYrH/F1q3wWOJMG2\ncr7JoIRUku9/f/ObNRprvufcvNHeCKgQm0dVdbA1HCwkNAsTfRG3WFq0NBMv5IDj\nbVOhEFI5wTf/lShv7SD1tkHd6nIJNJgDq2vomZAqKCfug6nLqhjoFTZr05pu/xK8\n5SyRpd3XApJBKBCXAN6PmfWA0LERKWExiQNMCaZGlGWva/2IaNQXYFAFGFsqZ0Xl\nF2z/xddh6z6yi77Tws4jvt7zYD/AwEeBUs5/VZ9z8B5w+wNVghAA5UvP5HXRTmxs\n1s4EjW89IbUFqAq6EStYZrK9D81XyDU0S4fPHwOXAQKBgQDxM55O12EFWJtRTwGx\ny7B++LI/sOYzS9VURJJfF5DXxjTvd7ylx/Agta5yMRzgNbhPbi1+IpZIpFIcqdPe\n0brtP+7SIfIhNqiuSUTnOuDTtJCP/vKPgQLUgVacr6D/O9Ca0Nd351+tsYuC1MAv\nleb/IvH6r4ZvW9i+LSf2XJpR1QKBgQDZ5LmhuNviUtu/YCXnrfzNleDos6YWaZ88\nJhWtdKXpm3oeyFUzFOBtAx/vm6br1Dmk0hc6y5x5nEVlRIwKRSFAkkC2bQehhkKC\n9vI6bQ65ccg1JqQS80QDPAmC5hg7I9U8nLW2kWGMQMb2Y01ODJsnjmHk5ZpGUZEc\nuBVlo1Ds4QKBgATPbbnOy82KfdZ6R+Ne149AsHVatsyRF5kNoQmqc6YJ+uZHsghw\nW1abqPX4CsZh6+IRpXCdife65zRRIruP3TV8D+w65xRIfca0CV6/KtquADAO+pFo\nFkFcrviC/Cf67mcYASQQBjV1k/2w9oA8chXmgYLpWzn/T+xDBEgCgsVdAoGBALYH\njMT8SEW07vvb+Q6pnY6qbXA51MDYkDyRnH6B+rFEQCtDNVotUKgBekaUBEjzzQxS\nrzFhNGGsGZVWRJ+3zOXCyOkeAMgB/8KlRwtkXG60DYvJsjxamjERkOiYDRoq/1NZ\nn7zbi2C+JPllUAmqIlxTaJju74lbTx1s9AMrAspBAoGABt1W/1y3aqi5moZ9XGyJ\nTB+knAH2k/Vq6Jv1bZpDdai5z9sIbVXT5SzD5mhkFP5FHiRWnNyjfouc9heTNIs6\njw8+fiZCpwG54+0+RDHR4XbdknPdJ4/XgKm9O/H0SqZilWXEd3/sVYGyFge6vlCg\nGeY5Mi4sGqtTS6iRMRyALf8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "cr-owner@cloudrobotai.iam.gserviceaccount.com",
+  "client_id": "102536442598425987438",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cr-owner%40cloudrobotai.iam.gserviceaccount.com"
+}
